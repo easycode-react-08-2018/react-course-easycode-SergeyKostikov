@@ -18,7 +18,7 @@ export class AdminPage extends Component {
             <h1>ADMIN PAGE</h1>
             <ul className="list-group">
               {
-                items.map(elem => <AdminItem item={elem.item}/>)
+                items.map(elem => <AdminItem key={elem.item} item={elem.item} />)
               }
             </ul>
             <br />

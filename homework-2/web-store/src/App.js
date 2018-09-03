@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   render() {
-
+    console.log(this.state.cart)
     if(this.state.activePage === 'homepage'){
       return <MainPage changePage={this.changePage}/>
     }
@@ -39,7 +39,9 @@ class App extends Component {
               items={this.getShopItems()}/>
     }
     if(this.state.activePage === 'shopingcart'){
-      return <ShoppingCart changePage={this.changePage}/>
+      return <ShoppingCart 
+              changePage={this.changePage} 
+              items={this.getCartItems()}/>
     }
   }
 
@@ -51,15 +53,15 @@ class App extends Component {
 
   addItemToShop = (item) => {
     let newShop = this.state.shop.concat(item)
-    console.log(newShop,item)
     this.setState({
       shop: newShop
     })
   }
 
   addItemToCart = (item) => {
+    let newCart = this.state.cart.concat(item)
     this.setState({
-      cart: item
+      cart: newCart
     })
   }
 

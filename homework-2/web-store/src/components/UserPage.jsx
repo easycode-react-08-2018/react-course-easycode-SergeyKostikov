@@ -13,7 +13,7 @@ export class UserPage extends Component {
           <div className="col-8">
             <div className="row">
               {items.map(elem => (
-                <UserItem item={elem.item} />
+                <UserItem key={elem.item} item={elem.item} addItemToCart={addItemToCart}/>
               ))}
             </div>
           </div>
