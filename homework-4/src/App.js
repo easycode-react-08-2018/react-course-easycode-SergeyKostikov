@@ -6,6 +6,7 @@ import './App.css';
 import {LoginPage} from "./components/login";
 import {RecipeListPage} from "./components/recipes-list";
 import {RecipePage} from "./components/recipe";
+import {Header} from "./components/header";
 
 
 export class App extends Component {
@@ -14,6 +15,7 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <Header/>
           <Switch>
             <Route exact  path="/" component={withRouter(LoginPage)}/>
             <Route path="/recipes-list" component={RecipeListPage}/>

@@ -8,7 +8,7 @@ export class LoginPage extends Component{
     console.log(this.props)
     return(
       <div className="login-container">
-        <Header/>
+
         <div className="login-form">
           <div className="login-form-header">
             <h3>welcome</h3>

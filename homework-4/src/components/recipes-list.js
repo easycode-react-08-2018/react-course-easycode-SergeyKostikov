@@ -1,19 +1,16 @@
 import React, {Component} from "react"
-import {Header} from "./header";
+
+import {RecipeListCard} from "./recipe-list-card";
+import {SearchForm} from "./search-form";
 
 export class RecipeListPage extends Component{
   render(){
+    console.log(this.props)
     return(
+
       <div className="login-container">
-        <Header/>
-        <div className="login-form">
-          <div className="login-form-header">
-            <h3>welcome</h3>
-          </div>
-          <div>
-           sdfasdfasdasdf
-          </div>
-        </div>
+        <SearchForm/>
+        <RecipeListCard history={this.props.history}/>
       </div>
     )
   }
